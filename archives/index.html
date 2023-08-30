@@ -31,6 +31,8 @@
 
 
 
+<script src="/Blog/js/lib/search.js"></script>
+
 
 
 <link rel="stylesheet" href="/Blog/css/main.css" />
@@ -74,16 +76,6 @@
             <span>&ensp;Archives</span>
         </a>
         
-        <a href="/Blog/categories">
-            <i class="fa-solid fa-bookmark fa-fw"></i>
-            <span>&ensp;Categories</span>
-        </a>
-        
-        <a href="/Blog/tags">
-            <i class="fa-solid fa-tags fa-fw"></i>
-            <span>&ensp;Tags</span>
-        </a>
-        
     </nav>
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
@@ -120,24 +112,6 @@
                     </div>
                 </a>
                 
-                <a href="/Blog/categories">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
-                    </div>
-                </a>
-                
-                <a href="/Blog/tags">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
-                    </div>
-                </a>
-                
             </div>
         </transition>
     </nav>
@@ -149,6 +123,8 @@
             <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
                 
 <div id="archives">
+    
+    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
     
     <div id="timeline-wrap" ref="timeline">
         
