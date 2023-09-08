@@ -156,15 +156,82 @@ CLASSPATH .;%JAVA_HOME%.jar;%JAVA_HOME%.jar</p>
 </ol>
 <p>C:&gt;javac -version javac 9.0.4</p>
 <p>C:&gt;</p>
-<p>IDE idea # jar包 maven repository
-下好后项目中创建一个文件夹jar，jar包拖进去，。。as library</p>
+<p>IDE idea # jar包 直接上Maven Repository<br />
+工程下New Directory<br />
+直接把jar包搞进去 然后右键-&gt;add as library<br />
+遇到问题在插件里进官网，找github（版本很重要！）<br />
+以后尽量用Maven/Gradle<br />
+特殊情况，方法重写<br />
+比如setAge有年龄限制，再写一遍就好</p>
 <h1 id="杂记">杂记</h1>
-<p>静态方法static 是建立在类的基础上 封装，继承，多态 继承extends
-子类重写父类的方法 final
-写在方法前则不能子类不能重写（但是能用父类方法）public final void
-xxx（）<br />
-类则不能被继承 值则无法被修改private static final String
+<p>.exe是win特有<br />
+.class字节码文件跑在jvm上</p>
+<blockquote>
+<p>.class特殊的可执行文件，需要jvm<br />
+优点：跨平台<br />
+缺点：过于依赖虚拟机</p>
+</blockquote>
+<pre><code>//假如此时有一个Test.java文件
+public class Test&#123;
+    //main函数：程序入口点
+    public static void main(String[] args)&#123;
+        System.out.println(&quot;Hello!&quot;);
+    &#125;
+&#125;</code></pre>
+<p>执行过程如下</p>
+<pre><code>javac Test.java//生成.class文件
+java Test//运行Test.java
+Hello!</code></pre>
+<p>静态方法static 是建立在类的基础上<br />
+与对象无关<br />
+如果static静态方法和变量设为public，他没被封装，不安全<br />
+可以用以下方法进行封装</p>
+<pre><code>// flower小区
+private static String community = &quot;flower&quot;;
+
+// getInstance()方法——静态不用this，因为this指的是创建的对象，而静态属性与对象无关，只与上层的类有关
+public static String getCommunityInstance()&#123;
+    return community;
+&#125;
+// main()里调用
+String str = Dogs.getCommunityInstance();
+</code></pre>
+<h1 id="封装继承多态">封装，继承，多态</h1>
+<p>封装：鼓励将数据和方法捆绑在一起形成新的单元，通过将属性设置为
+public，失去了对数据的封装，外部代码可以随意访问和修改属性，这破坏了封装性。</p>
+<p>继承extends<br />
+子类重写父类的方法
+final写在方法前则不能子类不能重写（但是能用父类方法）<br />
+public final void xxx（）<br />
+类则不能被继承<br />
+值则无法被修改private static final String
 xxx（本来在当前类中是可以修改的）</p>
+<p>多态<br />
+多个行为，功能多了<br />
+要有继承关系</p>
+<pre><code>// 替父从军 向上转型
+HuaHu huaHu = new HuaMuLan();
+System.out.println(huaHu.name);
+System.out.println(huaHu.age);
+huaHu.fight();
+
+// 有一天，仗打完了，遇上自己心爱的人,做回自己 向下转型
+HuaMuLan huaMuLan = (HuaMuLan)huaHu;
+System.out.println(huaMuLan.name);
+System.out.println(huaMuLan.age);
+huaMuLan.dressing();
+//OUTPUT
+HuaHu
+45
+干架！
+HuaMuLan
+19
+化妆！</code></pre>
+<p>抽象类abstract class<br />
+设置后无法new该类<br />
+接口interface 里所有的方法都是抽象的<br />
+implements实现接口public class Chinese implements Human<br />
+抽象类是对具体事物进行抽象，接口是对动作、行为进行抽象</p>
 
     </div>
     
