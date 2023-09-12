@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Archives | Huhu&#39;s Corner</title>
+        <title>Front end | Huhu&#39;s Corner</title>
         <meta name="author" content="Huloveu" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -31,7 +31,9 @@
 
 
 
-<script src="/Blog/js/lib/search.js"></script>
+
+
+
 
 
 
@@ -121,126 +123,42 @@
 </transition>
 
             <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-                
-<div id="archives">
-    
-    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
-    
-    <div id="timeline-wrap" ref="timeline">
+                <div class="article">
+    <div>
+        <h1>Front end</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/9/12
+        </span>
         
-        <div class="timeline" data-title="helloworld">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/8/29</div>
-                <a href="/Blog/2023/08/29/hello-world/">
-                    <h3>Hello World</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="java学习笔记">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/8/30</div>
-                <a href="/Blog/2023/08/30/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                    <h3>java学习笔记</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="计算机三级网络技术">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/8/31</div>
-                <a href="/Blog/2023/08/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/">
-                    <h3>计算机三级网络技术</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="对软件的简单理解">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/9/4</div>
-                <a href="/Blog/2023/09/04/%E5%AF%B9%E8%BD%AF%E4%BB%B6%E7%9A%84%E7%AE%80%E5%8D%95%E7%90%86%E8%A7%A3/">
-                    <h3>对软件的简单理解</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="服务器搭建简单理解">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/9/5</div>
-                <a href="/Blog/2023/09/05/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E7%AE%80%E5%8D%95%E7%90%86%E8%A7%A3/">
-                    <h3>服务器搭建简单理解</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="andriod&ioshacker">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/9/12</div>
-                <a href="/Blog/2023/09/12/Andriod-IOS-Hacker/">
-                    <h3>Andriod&amp;IOS Hacker</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="窗口程序">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/9/12</div>
-                <a href="/Blog/2023/09/12/%E7%AA%97%E5%8F%A3%E7%A8%8B%E5%BA%8F/">
-                    <h3>窗口程序</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="frontend">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/9/12</div>
-                <a href="/Blog/2023/09/12/Front-end/">
-                    <h3>Front end</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
         
     </div>
+    
+    <div class="content" v-pre>
+        <p>HTML<br />
+网站内容的含义和结构<br />
+CSS<br />
+网页的表现与展示效果<br />
+JS<br />
+功能与行为<br />
+js框架jquery vue react css框架bootstrap element<br />
+学会=job</p>
+<p><strong>有了Node.js，就可以使用JavaScript来编写后端代码</strong><br />
+Node.js是一种服务器端运行时环境，它使JavaScript能够在服务器上执行，处理后端任务。<br />
+这就意味着爷可以使用JavaScript来构建后端应用程序、API、服务器、数据库连接和其他与服务器相关的功能。</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
 </div>
 
                 <footer id="footer">
@@ -271,6 +189,12 @@
             
         </div>
         <script src="/Blog/js/main.js"></script>
+        
+        
+
+
+
+
         
     </body>
 </html>
